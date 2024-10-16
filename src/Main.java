@@ -40,10 +40,11 @@ public class Main {
                             System.out.println("You rolled: " + dieOne + " and " + dieTwo + " The Point is now: " + pointNumber);
                             System.out.print("Roll again (hit enter to continue)");
                             playAgain = in.nextLine();
+                            do {
                             if (playAgain.equalsIgnoreCase("" ))
                             {
-                                ;
-                                do {
+
+
                                 dieOne = new Random().nextInt(6) + 1;
                                 dieTwo = new Random().nextInt(6) + 1;
                                 crapsRoll = dieOne + dieTwo;
@@ -55,7 +56,7 @@ public class Main {
                                 }
                                 else if (crapsRoll == pointNumber)
                                 {
-                                    System.out.println("You rolled the point. You Win!");
+                                    System.out.println("You rolled: " + dieOne + " and " + dieTwo + " With a sum of: " + crapsRoll + "." + " You rolled the point! You Win!");
                                     stillRolling = false;
                                 }
                                 else
@@ -66,15 +67,17 @@ public class Main {
                                     playAgain = in.nextLine();
                                 }
 
-                                }while (stillRolling);
+
                             }
                             else
                             {
                                 trash = playAgain;
                                 System.out.println("You said: " + trash);
-                                System.out.print("Please say Y or N: ");
+                                System.out.print("Please hit enter");
                                 playAgain = in.nextLine();
+                                stillRolling = true;
                             }
+                            }while (stillRolling);
                         }
 
 
