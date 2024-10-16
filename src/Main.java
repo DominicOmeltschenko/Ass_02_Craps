@@ -63,7 +63,7 @@ public class Main {
                                 {
                                     stillRolling = true;
                                     System.out.println("You rolled: " + dieOne + " and " + dieTwo + " With a sum of: " + crapsRoll);
-                                    System.out.print("You didn't roll the point. Roll again (hit enter to continue)");
+                                    System.out.print("You didn't roll the point. Roll again to try for the point (hit enter to continue)");
                                     playAgain = in.nextLine();
                                 }
 
